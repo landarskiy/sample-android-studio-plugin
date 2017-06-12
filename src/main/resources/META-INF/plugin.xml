@@ -1,0 +1,43 @@
+<idea-plugin>
+    <id>io.github.landarskiy.sample</id>
+    <name>Sample</name>
+    <version>0.1.0</version>
+    <vendor email="landarskiy@gmail.com">
+        Yauhen Landarski
+    </vendor>
+
+    <description>
+        <![CDATA[
+            <p>Sample</p>
+            ]]>
+    </description>
+
+    <change-notes>
+        <![CDATA[
+            <p>Sample</p>
+            ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="162.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="Sample.Menu" text="_Sample action" popup="true">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="EditSource"/>
+            <action id="Sample.Menu.Action"
+                    class="io.github.landarskiy.sample.SampleAction"
+                    text="_Problem action"/>
+        </group>
+    </actions>
+</idea-plugin>
